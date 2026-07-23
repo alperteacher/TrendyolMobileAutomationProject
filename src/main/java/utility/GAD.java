@@ -1,0 +1,55 @@
+package utility;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+public class GAD {
+    public static AndroidDriver driver;
+    public static WebDriverWait wait;
+
+    public static Logger logger = LogManager.getLogger(GAD.class);
+
+    @BeforeTest
+    public void initialization() throws MalformedURLException {
+        logger.info("Driver başlatılıyor.");
+
+        UiAutomator2Options options = new UiAutomator2Options();
+        options.setDeviceName("emulator-5554");
+        options.setPlatformName("Android");
+        options.setPlatformVersion("16");
+        options.setAppPackage("trendyol.com");
+        options.setAppActivity("com.trendyol.common.splash.impl.ui.SplashActivity");
+        options.setAppWaitActivity("*");
+        options.setSkipUnlock(true);
+        options.setNoReset(false);
+        options.setAutomationName("UiAutomator2");
+
+        logger.info("Opsiyonlar tanımlandı.");
+
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        logger.info("Driver başlatıldı.");
+    }
+
+    @AfterTest
+    public void finalization(){
+        logger.info("Driver Kapatılıyor.");
+
+        if (!(driver == null)) {
+            driver.quit();
+
+            logger.info("Driver Kapatıldı.");
+        }
+    }
+}
