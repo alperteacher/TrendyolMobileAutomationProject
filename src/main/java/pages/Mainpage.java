@@ -14,12 +14,6 @@ public class Mainpage extends GAD {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"trendyol.com:id/buttonSelectGenderWoman\")")
-    public WebElement genderWomanButton;
-
-    @FindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
-    public WebElement notificationAllowButton;
-
     @AndroidFindBy(accessibility = "Arama")
     public WebElement searchIcon;
 

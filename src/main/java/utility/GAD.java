@@ -9,8 +9,12 @@ import org.apache.logging.log4j.Logger;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+
+import static pages.HelperFunctions.restartApplication;
 
 public class GAD {
     public static AndroidDriver driver;
@@ -18,19 +22,19 @@ public class GAD {
 
     public static Logger logger = LogManager.getLogger(GAD.class);
 
-    @BeforeTest
-    public void initialization() throws MalformedURLException {
+    @BeforeSuite
+    public void initialization() throws MalformedURLException, InterruptedException {
         logger.info("Driver başlatılıyor.");
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("emulator-5554");
         options.setPlatformName("Android");
         options.setPlatformVersion("16");
+        options.setCapability("appium:forceAppLaunch", true);
         options.setAppPackage("trendyol.com");
-        options.setAppActivity("com.trendyol.common.splash.impl.ui.SplashActivity");
         options.setAppWaitActivity("*");
         options.setSkipUnlock(true);
-        options.setNoReset(false);
+        options.setNoReset(true);
         options.setAutomationName("UiAutomator2");
 
         logger.info("Opsiyonlar tanımlandı.");
@@ -40,11 +44,17 @@ public class GAD {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         logger.info("Driver başlatıldı.");
+        logger.info("Trendyol'a yönleniliyor");
+
+        restartApplication();
     }
 
-    @AfterTest
-    public void finalization(){
+    @AfterSuite
+    public void finalization() throws InterruptedException {
+        logger.info("Trendyol Kapatılıyor.");
         logger.info("Driver Kapatılıyor.");
+
+        Thread.sleep(15000);
 
         if (!(driver == null)) {
             driver.quit();
