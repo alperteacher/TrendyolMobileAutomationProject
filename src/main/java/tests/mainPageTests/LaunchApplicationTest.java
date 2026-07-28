@@ -11,6 +11,7 @@ import org.testng.asserts.SoftAssert;
 
      * Test Adı: Trendyol Başlatma Testi
      * Test Açıklaması: Trendyol uygulaması başlatılır ve kullanıcının anasayfaya geldiği doğrulanır.
+     * TestID: 01
 
      */
 
@@ -29,7 +30,11 @@ public class LaunchApplicationTest extends GAD {
         MainPage mp = new MainPage();
         SoftAssert softAssert = new SoftAssert();
 
+        logger.info("Ana sayfa objesi oluşturuldu.");
+        logger.info("Carousel Banner Component elementi bekleniyor.");
         wait.until(ExpectedConditions.visibilityOf(mp.carouselBannerComponent));
+
+        logger.info("Element bulundu, doğrulama yapılıyor.");
         softAssert.assertTrue(mp.carouselBannerComponent.isDisplayed(), "Anasayfada banner görünür değil.");
 
         logger.info("Test başarılı, trendyol kapatılıyor.");

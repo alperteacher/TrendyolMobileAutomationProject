@@ -5,9 +5,9 @@ Mainpage
 
 
 Search
-- Geçerli bir anahtar kelime ile arama yapılması
-- Otomatik öneriden seçim yaparak arama
-- Sonuç vermeyen kelime ile arama yapılması
+01- Geçerli bir anahtar kelime ile arama yapılması
+02- Otomatik öneriden seçim yaparak arama
+03- Sonuç vermeyen kelime ile arama yapılması
 
 Listing Page
 - Arama sonuçlarında sonsuz scroll / pagination 

@@ -1,27 +1,22 @@
 package tests.mainPageTests;
 
-import org.openqa.selenium.Point;
-import org.openqa.selenium.interactions.PointerInput;
-import org.openqa.selenium.interactions.Sequence;
+import pages.MainPage;
 import pages.ListingPage;
 import utility.GAD;
-import pages.MainPage;
-import pages.SellerPage;
 
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import java.time.Duration;
-import java.util.Arrays;
-
-/**
+    /**
 
      * Test Adı: Trendyol Kampanya İşlevsellik Testi
      * Test Açıklaması: Trendyol uygulaması başlatılır ve kampanyaya tıklanılarak, açılan sayfa doğrulanır.
+     * TestID: 02
 
      */
+
 
 public class BannerActivityTest extends GAD {
 

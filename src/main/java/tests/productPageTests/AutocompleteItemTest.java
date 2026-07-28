@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 
 /**
 
- * Test Adı: Geçerli bir anahtar kelime ile arama yapılması
+ * Test Adı: Otomatik öneriden seçim yaparak arama
  * Test Açıklaması: ***
- * Test ID: 01
+ * Test ID: 02
 
  */
 
-public class SearchWithValidKeyTest extends GAD {
+public class AutocompleteItemTest extends GAD {
 
     /**
      * """ Method Adımları """
@@ -21,6 +21,6 @@ public class SearchWithValidKeyTest extends GAD {
      */
 
     @Test(priority = 1, groups = "smoke")
-    public void searchWithValidKeyTest() {
+    public void autocompleteItemTest() {
     }
 }
