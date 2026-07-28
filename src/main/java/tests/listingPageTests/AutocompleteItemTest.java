@@ -1,4 +1,4 @@
-package tests.productPageTests;
+package tests.listingPageTests;
 
 import utility.GAD;
 

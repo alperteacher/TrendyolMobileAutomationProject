@@ -1,4 +1,4 @@
-package tests.productPageTests;
+package tests.listingPageTests;
 
 import utility.GAD;
 
@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 
 /**
 
- * Test Adı: Geçerli bir anahtar kelime ile arama yapılması
+ * Test Adı: Geçersiz bir anahtar kelime ile arama yapılması
  * Test Açıklaması: ***
- * Test ID: 01
+ * Test ID: 03
 
  */
 
-public class SearchWithValidKeyTest extends GAD {
+public class SearchWithInvalidKeyTest extends GAD {
 
     /**
      * """ Method Adımları """
@@ -21,6 +21,6 @@ public class SearchWithValidKeyTest extends GAD {
      */
 
     @Test(priority = 1, groups = "smoke")
-    public void searchWithValidKeyTest() {
+    public void searchWithInvalidKeyTest() {
     }
 }
