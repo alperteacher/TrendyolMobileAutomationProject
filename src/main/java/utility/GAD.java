@@ -10,9 +10,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 
 import static pages.HelperFunctions.restartApplication;
 
@@ -40,8 +38,8 @@ public class GAD {
         logger.info("Opsiyonlar tanımlandı.");
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
         logger.info("Driver başlatıldı.");
         logger.info("Trendyol'a yönleniliyor");

@@ -1,9 +1,8 @@
 package tests;
 
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import utility.GAD;
-import pages.Mainpage;
+import pages.MainPage;
 
 import org.testng.annotations.Test;
 
@@ -30,7 +29,7 @@ public class TrendyolExampleTest extends GAD {
     public void exampleCase1() {
         logger.info("Trendyol Başlatıldı.");
 
-        Mainpage mp = new Mainpage();
+        MainPage mp = new MainPage();
 
         mp.searchIcon.click();
         mp.searchInput.sendKeys("Tisort");
@@ -43,7 +42,7 @@ public class TrendyolExampleTest extends GAD {
     public void exampleCase2() {
         logger.info("Trendyol Başlatıldı.");
 
-        Mainpage mp = new Mainpage();
+        MainPage mp = new MainPage();
 
         mp.searchIcon.click();
         mp.searchInput.sendKeys("Pantolon");

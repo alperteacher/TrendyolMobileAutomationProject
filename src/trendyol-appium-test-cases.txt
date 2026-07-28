@@ -1,0 +1,32 @@
+
+Mainpage
+01- Uygulama açılışı
+02- Anasayfa banner / kampanya modülüne tıklanması
+
+
+Search
+- Geçerli bir anahtar kelime ile arama yapılması
+- Otomatik öneriden seçim yaparak arama
+- Sonuç vermeyen kelime ile arama yapılması
+
+Listing Page
+- Arama sonuçlarında sonsuz scroll / pagination 
+- PLP üzerinde sıralama uygulanması 
+- Tek filtre uygulanması
+- Tüm filtrelerin temizlenmesi 
+
+Product Page
+- Liste üzerinden ürün kartına tıklayıp PDP açılması
+- Beden/renk seçimi yapıldığında ürün bilgilerinin güncellenmesi 
+- Zorunlu varyant seçmeden sepete ekleme denemesi
+- Stok dışı varyantın sepete eklenememesi 
+- Geçerli ürünün sepete başarıyla eklenmesi
+- Aynı ürünün ikinci kez eklenmesinde iş kuralının doğru uygulanması 
+- PLP fiyatı ile PDP fiyatının tutarlılığı
+
+Sepet
+- Sepet badge sayısının ürün ekleme sonrası anında güncellenmesi
+- Sepet ekranında doğru ürün bilgisinin görünmesi
+- Sepette ürün adedini artırma / azaltma
+- Sepetten ürün silme 
+- Uygulama kapatılıp tekrar açıldığında sepetin korunması 

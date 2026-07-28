@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Mainpage extends GAD {
+public class MainPage extends GAD {
 
-    public Mainpage() {
+    public MainPage() {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
@@ -25,5 +25,11 @@ public class Mainpage extends GAD {
 
     @FindBy(xpath = "(//android.widget.TextView[@resource-id=\"composeProductTileTitle\"])[1]")
     public WebElement firstItemInSearchPage;
+
+    @FindBy(id = "trendyol.com:id/composeCarouselBannerWidget")
+    public WebElement carouselBannerComponent;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"4/10\")")
+    public WebElement bankkartCarouselIndicator;
 
 }
