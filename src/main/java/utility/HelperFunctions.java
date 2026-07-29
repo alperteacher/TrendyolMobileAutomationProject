@@ -1,8 +1,6 @@
-package pages;
+package utility;
 
-import utility.GAD;
-
-public class HelperFunctions extends GAD {
+public class HelperFunctions extends GeneralAndroidDriver {
 
     public static void restartApplication() throws InterruptedException {
         logger.info("Uygulama kapatılıyor, temiz başlangıç yapılıyor.");

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Arama Aktiviteleri Otomasyonları">
+
+    <listeners>
+        <listener class-name="utility.ExtentTestNGListener"/>
+    </listeners>
+
+    <test name="Arama Testi">
+        <classes>
+            <class name="tests.searchTests.SearchWithValidKeyTest"/>
+            <class name="tests.searchTests.AutocompleteItemTest"/>
+            <class name="tests.searchTests.SearchWithInvalidKeyTest"/>
+        </classes>
+    </test>
+</suite>

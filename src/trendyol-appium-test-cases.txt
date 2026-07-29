@@ -10,10 +10,9 @@ Search
 03- Sonuç vermeyen kelime ile arama yapılması
 
 Listing Page
-- Arama sonuçlarında sonsuz scroll / pagination 
-- PLP üzerinde sıralama uygulanması 
-- Tek filtre uygulanması
-- Tüm filtrelerin temizlenmesi 
+01- Arama sonuçlarında sonsuz scroll / pagination
+02- PLP üzerinde sıralama uygulanması
+03- Tek filtre uygulanması (Negatif CASE1 : Tüm filtrelerin temizlenmesi )
 
 Product Page
 - Liste üzerinden ürün kartına tıklayıp PDP açılması

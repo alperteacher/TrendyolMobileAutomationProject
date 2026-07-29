@@ -1,13 +1,13 @@
 package pages;
 
-import utility.GAD;
+import utility.GeneralAndroidDriver;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class SellerPage extends GAD {
+public class SellerPage extends GeneralAndroidDriver {
 
     public SellerPage() {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

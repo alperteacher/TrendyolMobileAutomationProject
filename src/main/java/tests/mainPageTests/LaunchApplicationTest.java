@@ -1,7 +1,7 @@
 package tests.mainPageTests;
 
 import pages.MainPage;
-import utility.GAD;
+import utility.GeneralAndroidDriver;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -15,7 +15,7 @@ import org.testng.asserts.SoftAssert;
 
      */
 
-public class LaunchApplicationTest extends GAD {
+public class LaunchApplicationTest extends GeneralAndroidDriver {
 
     /**
      * """ Method Adımları """
@@ -37,6 +37,8 @@ public class LaunchApplicationTest extends GAD {
         logger.info("Element bulundu, doğrulama yapılıyor.");
         softAssert.assertTrue(mp.carouselBannerComponent.isDisplayed(), "Anasayfada banner görünür değil.");
 
+        logger.info("Assert kontrolü başarılı.");
         logger.info("Test başarılı, trendyol kapatılıyor.");
+        logger.info("TEST ÖZETİ: Uygulama doğru bir şekilde başlatıldı. Anasayfa elementleri yüklendi.");
     }
 }

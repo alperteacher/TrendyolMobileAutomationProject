@@ -2,14 +2,14 @@ package tests.mainPageTests;
 
 import pages.MainPage;
 import pages.ListingPage;
-import utility.GAD;
+import utility.GeneralAndroidDriver;
 
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-    /**
+/**
 
      * Test Adı: Trendyol Kampanya İşlevsellik Testi
      * Test Açıklaması: Trendyol uygulaması başlatılır ve kampanyaya tıklanılarak, açılan sayfa doğrulanır.
@@ -18,7 +18,7 @@ import org.testng.asserts.SoftAssert;
      */
 
 
-public class BannerActivityTest extends GAD {
+public class BannerActivityTest extends GeneralAndroidDriver {
 
     /**
      * """ Method Adımları """
@@ -50,5 +50,6 @@ public class BannerActivityTest extends GAD {
         softAssert.assertTrue(listingPage.firstItemCard.isDisplayed(), "Element sayfada gözükmedi.");
         logger.info("Assert kontrolü sağlandı.");
         logger.info("Test başarılı, trendyol kapatılıyor.");
+        logger.info("TEST ÖZETİ: 4. İndikatörlü kampanyaya tıklanıldı. Kampanya ana aktivitesi doğru çalışıyor ve kampanya sayfasına yönlendiriyor.");
     }
 }

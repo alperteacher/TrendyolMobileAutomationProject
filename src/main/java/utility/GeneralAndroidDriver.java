@@ -10,15 +10,16 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
-import static pages.HelperFunctions.restartApplication;
+import static utility.BeforeSchemas.CLASS_restartApplication;
 
-public class GAD {
+public class GeneralAndroidDriver {
     public static AndroidDriver driver;
     public static WebDriverWait wait;
 
-    public static Logger logger = LogManager.getLogger(GAD.class);
+    public static Logger logger = LogManager.getLogger(GeneralAndroidDriver.class);
 
     @BeforeSuite
     public void initialization() throws MalformedURLException, InterruptedException {
@@ -43,8 +44,11 @@ public class GAD {
 
         logger.info("Driver başlatıldı.");
         logger.info("Trendyol'a yönleniliyor");
+    }
 
-        restartApplication();
+    @BeforeClass
+    public void beforeClassHook() throws InterruptedException {
+        CLASS_restartApplication();
     }
 
     @AfterSuite
